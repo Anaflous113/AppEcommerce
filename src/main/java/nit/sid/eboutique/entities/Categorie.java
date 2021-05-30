@@ -19,7 +19,7 @@ public class Categorie implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idcategorie;
-	@Size(min=4)
+	@Size(min=8)
     private String description;
 	@NotEmpty
 	@Size(min=4,max=20)

@@ -26,14 +26,7 @@ public class Panier implements Serializable {
 	}
 	
 	
-	public Map<Long, LigneCommande> getItems() {
-		return items;
-	}
-
-
-	public void setItems(Map<Long, LigneCommande> items) {
-		this.items = items;
-	}
+	
 
 
 	public Collection<LigneCommande> getCommandes()
@@ -50,6 +43,14 @@ public class Panier implements Serializable {
 		return total;
 	}
 	
+	public void setItems(Map<Long, LigneCommande> items) {
+		this.items = items;
+	}
+
+
+
+
+
 	public int getSize()
 	{
 		return items.size();
@@ -58,6 +59,15 @@ public class Panier implements Serializable {
 	public void deleteProduit(Long idProduit)
 	{
 		items.remove(idProduit);
+	}
+
+
+
+
+
+	public Collection<LigneCommande> getItems() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

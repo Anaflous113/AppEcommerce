@@ -40,8 +40,8 @@ public class Commande implements Serializable {
 	public Collection<LigneCommande> getItems() {
 		return items;
 	}
-	public void setItems(Map<Long, LigneCommande> map) {
-		this.items = (Collection<LigneCommande>) map;
+	public void setItems(Collection<LigneCommande> items) {
+		this.items = items;
 	}
 	public Client getClient() {
 		return client;
@@ -49,9 +49,6 @@ public class Commande implements Serializable {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-	public Commande() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
      
 }

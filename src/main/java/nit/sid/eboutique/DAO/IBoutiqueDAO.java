@@ -1,14 +1,7 @@
 package nit.sid.eboutique.DAO;
 
 import java.util.List;
-
-
-
 import nit.sid.eboutique.entities.*;
-
-
-
-
 
 public interface IBoutiqueDAO {
   
