@@ -3,6 +3,7 @@ package nit.sid.eboutique.entities;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Map;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -39,8 +40,8 @@ public class Commande implements Serializable {
 	public Collection<LigneCommande> getItems() {
 		return items;
 	}
-	public void setItems(Collection<LigneCommande> items) {
-		this.items = items;
+	public void setItems(Map<Long, LigneCommande> map) {
+		this.items = (Collection<LigneCommande>) map;
 	}
 	public Client getClient() {
 		return client;
