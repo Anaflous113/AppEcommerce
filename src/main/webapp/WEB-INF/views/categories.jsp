@@ -1,8 +1,11 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
+<div>
+  ${exception}
+</div>
 <div id="formCat">
-<f:form modelAttribute="categorie" action="SaveCat" 
-        method="post"  enctype="multipar/form-data"> 
+<f:form modelAttribute="categorie" action="saveCat" 
+        method="post"  enctype="multipart/form-data"> 
 <table>
  <tr>
  <td> ID Categorie</td>
@@ -21,8 +24,14 @@
  </tr>
  <tr>
  <td> Photo</td>
- <td><input type="file" name= "file"/> </td>
- <td></td>
+	 <td>
+	  <c:if test="${categorie.idcategorie!=null }">
+	     <img src="photoCat?idCat=${categorie.idcategorie}">
+	  </c:if>
+	  </td>
+	  <td>
+	 <input type="file" name= "file"/> 
+	 </td>
  </tr>
  <tr>
  <td><input type="submit" value="Save"> </td>
@@ -39,7 +48,9 @@
 <td>${cat.idcategorie}</td>
 <td>${cat. nomCategorie}</td>
 <td>${cat.description}</td> 
-<td></td>
+<td><img src="photoCat?idCat=${cat.idcategorie}"></td>
+<td><a href="suppCat?idCat=${cat.idcategorie}">Supp</a></td>
+<td><a href="editCat?idCat=${cat.idcategorie}">Edit</a></td>
  </tr>
 
 </c:forEach>

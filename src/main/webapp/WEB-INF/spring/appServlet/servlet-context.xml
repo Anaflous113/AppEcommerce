@@ -24,8 +24,9 @@
 	<context:component-scan base-package="nit.sid.eboutique" />
 	
 	<beans:bean name="multipartResolver"
-	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-	<beans:property name="maxUploadSize" value="100000"></beans:property>
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10000000"></beans:property>
+	
 	
 	</beans:bean>
 	
